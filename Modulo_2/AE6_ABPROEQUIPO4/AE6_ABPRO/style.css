@@ -1,0 +1,47 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #ee0bee;
+    color: white;
+}
+
+.card-img-top {
+    height: 400px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #28a745;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.seat.taken {
+    background-color: #dc3545;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background-color: #007bff;
+}

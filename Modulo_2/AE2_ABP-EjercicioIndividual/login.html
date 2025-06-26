@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario de Registro</title>
+</head>
+<body>
+    <section>
+        <h2>Regístrate</h2>
+        <form>
+
+            <label>Nombre:
+                <input type="text" name="nombre">
+            </label><br><br>
+
+            <label>Apellido:
+                <input type="text" name="apellido">
+            </label><br><br>
+
+            <label>Correo Electrónico:
+                <input type="text" name="correo">
+            </label><br><br>
+
+            <label>Contraseña:
+                <input type="password" name="contrasena">
+            </label><br><br>
+
+            <label>Confirmar Contraseña:
+                <input type="password" name="confirmar_contrasena">
+            </label><br><br>
+
+            <label>Fecha de Nacimiento:
+                <input type="date" name="fecha_nacimiento"><input type="submit">
+            </label><br>
+
+            <p>Género:</p>
+            <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+            <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+            <label><input type="radio" name="genero" value="otro"> Otro</label><br><br>
+
+            <label>
+                <input type="checkbox" name="boletin"> Suscribirse al boletín
+            </label><br><br>
+
+            <label>Descripción de mi mismo:<br>
+                <textarea name="descripcion" rows="5" cols="20"></textarea>
+            </label><br><br>
+
+            <label>Selecciona tus intereses:<br>
+                <select name="intereses" multiple size="4">
+                    <option>Música</option>
+                    <option>Deportes</option>
+                    <option>Viajes</option>
+                    <option>Tecnología</option>
+                </select>
+            </label><br><br>
+
+            <input type="submit" value="Registrarse">
+        </form>
+    </section>
+</body>
+</html>

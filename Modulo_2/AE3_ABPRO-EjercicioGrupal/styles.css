@@ -1,0 +1,82 @@
+/* Estilos base: Mobile First */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header.encabezado {
+  background: linear-gradient(to right, #6bb96f, #89d593);
+  padding: 20px;
+  text-align: center;
+}
+
+.titulo {
+  color: white;
+  font-size: 24px;
+}
+
+.container {
+  padding: 20px;
+}
+
+#materiales ul {
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+form {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 400px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d1d1d1;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b5b5b5;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* --- Responsivo para tablets --- */
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+  }
+
+  form {
+    width: 60%;
+  }
+}
+
+/* --- Responsivo para escritorio --- */
+@media (min-width: 1024px) {
+  form {
+    width: 40%;
+  }
+}

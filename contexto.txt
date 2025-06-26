@@ -1,0 +1,933 @@
+Aprendizaje esperado 5
+Codificar en lenguaje JavaScript rutinas simples para la personalización de eventos sencillos dentro de un documento HTML, dando solución al problema planteado.
+
+Breve historia de JavaScript
+
+JavaScript fue creado por Brendan Eich en 1995 mientras trabajaba en Netscape. Originalmente llamado Mocha, luego fue renombrado a LiveScript y, finalmente, JavaScript. Su propósito inicial era agregar interactividad a las páginas web. A lo largo de los años, se ha convertido en un lenguaje fundamental para el desarrollo web moderno, siendo utilizado tanto en el lado del cliente como en el servidor.
+
+Relevancia de JavaScript
+
+JavaScript es un lenguaje indispensable en la web, ya que permite a los desarrolladores agregar interactividad, manipular el DOM (Document Object Model), gestionar eventos y realizar solicitudes HTTP. En un navegador, JavaScript puede modificar el contenido de una página, responder a las acciones del usuario (como clics y desplazamientos), y controlar el flujo de datos sin necesidad de recargar la página.
+
+¿Qué puede y no puede hacer en el contexto de un navegador?
+
+Puede hacer: Manipular elementos HTML, validar formularios, realizar animaciones, manejar eventos y hacer peticiones asíncronas.
+
+No puede hacer: Acceder directamente a archivos del sistema operativo del usuario o interactuar con otros programas fuera del navegador.
+
+¿Cómo incorporar código JavaScript en un documento HTML?
+
+JavaScript se puede incluir en un documento HTML de varias formas:
+
+En línea dentro de un atributo (por ejemplo, onclick en un botón).
+
+Dentro de la etiqueta <script> en la sección <head> o antes de la etiqueta de cierre </body> para mejorar la carga de la página.
+
+Mediante archivos externos referenciados en la etiqueta <script>.
+
+Selectores básicos: getElementById. Obtención y manipulación de valores y textos de los elementos del DOM
+
+El método getElementById se utiliza para seleccionar un elemento del DOM mediante su ID. A partir de ahí, se pueden manipular sus propiedades, como el texto o los valores de los campos de un formulario.
+
+Eventos básicos: onclick y onchange. Variables
+
+JavaScript permite asignar eventos a los elementos HTML, como:
+
+onclick: Se utiliza para ejecutar una función cuando un usuario hace clic en un elemento.
+
+onchange: Se usa para detectar cambios en un campo de formulario, como un cuadro de texto o una selección en un menú desplegable.
+
+Las variables se utilizan para almacenar información que puede ser utilizada y manipulada dentro del código JavaScript, como los valores de los elementos del DOM o los resultados de cálculos.
+
+Expresiones aritméticas
+
+JavaScript admite operaciones aritméticas básicas, como suma, resta, multiplicación, división y módulo. Estas expresiones pueden ser utilizadas dentro de funciones, sentencias condicionales y eventos para calcular y manipular valores.
+
+Sentencias condicionales
+
+Las sentencias condicionales, como if, else if y else, permiten ejecutar diferentes bloques de código dependiendo de si una condición es verdadera o falsa. Son fundamentales para controlar el flujo del programa en función de las interacciones del usuario o los resultados de cálculos.
+
+Funciones
+
+Las funciones en JavaScript permiten encapsular un conjunto de instrucciones que pueden ser ejecutadas varias veces. Se definen con la palabra clave function y pueden aceptar parámetros y devolver valores.
+
+¿Cómo ejecutar código JavaScript en la consola?
+
+La consola de los navegadores modernos permite ejecutar código JavaScript directamente, lo que facilita la depuración y la experimentación con pequeñas porciones de código. Para acceder a la consola, generalmente se puede presionar F12 o usar la opción de "Herramientas de desarrollador" en el menú del navegador.
+
+Depurando el código JavaScript con la consola
+
+La consola también permite depurar código JavaScript al mostrar errores, advertencias y mensajes personalizados a través de console.log, console.error y otros métodos de la consola. Esto es útil para entender el comportamiento del código y localizar posibles fallos.
+
+JavaScript es un lenguaje de programación esencial para el desarrollo web. Gracias a él, los sitios web pueden ser dinámicos e interactivos, permitiendo que los usuarios interactúen con los elementos en pantalla. Para comprender su importancia, es necesario revisar su origen y sus capacidades dentro de un navegador.
+
+Breve historia de JavaScript
+
+JavaScript fue creado en 1995 por Brendan Eich mientras trabajaba en Netscape Communications. Su desarrollo fue rápido, ya que la compañía necesitaba un lenguaje de programación ligero que pudiera ejecutarse en el navegador para mejorar la interactividad de las páginas web.
+
+Inicialmente, JavaScript fue criticado por ser un lenguaje sencillo y con algunas inconsistencias en su diseño. Sin embargo, con el tiempo, se convirtió en un estándar con la creación de ECMAScript, una especificación que define su funcionamiento.
+
+Desde entonces, JavaScript ha evolucionado significativamente, incorporando nuevas características como ES6 (ECMAScript 2015), que introdujo mejoras en la sintaxis y el manejo de datos. Hoy en día, JavaScript no solo se usa en navegadores, sino también en servidores (Node.js), aplicaciones móviles (React Native), e incluso inteligencia artificial y automatización.
+
+Relevancia de JavaScript en el desarrollo web
+
+JavaScript es el lenguaje de programación más utilizado en el desarrollo web. Su importancia radica en su capacidad para manipular el DOM (Document Object Model), lo que permite modificar el contenido y la apariencia de una página sin necesidad de recargarla.
+
+Algunas de sus principales capacidades en el navegador incluyen:
+
+Lo que JavaScript puede hacer
+
+Manipular elementos HTML y CSS en tiempo real.
+
+Capturar eventos del usuario, como clics o desplazamientos.
+
+Enviar y recibir datos desde un servidor sin recargar la página (AJAX y Fetch API).
+
+Almacenar información en el navegador con localStorage y sessionStorage.
+
+Crear efectos visuales y animaciones.
+
+Lo que JavaScript no puede hacer en un navegador
+
+Acceder directamente a archivos del sistema sin autorización del usuario.
+
+Conectarse a bases de datos sin un servidor intermedio.
+
+Ejecutar código con permisos de administrador en el sistema operativo.
+
+Manipular la configuración del navegador o del hardware del usuario sin permisos explícitos.
+
+JavaScript es una herramienta poderosa para el desarrollo web, pero es importante conocer sus límites dentro del entorno del navegador. Con un uso adecuado, permite crear aplicaciones interactivas y mejorar la experiencia del usuario de manera significativa.
+
+Aunque no es obligatorio para escribir JavaScript, Node.js es un gran apoyo que nos permite ejecutar y probar nuestro código JavaScript.  Para comenzar, solo necesitamos descargar el instalador que coincida con el sistema operativo de nuestro computador. En el sitio https://nodejs.org/en/download encontraremos lo que necesitamos.
+
+ Una vez que lo descarguemos, simplemente ejecutamos el instalador y listo, ¡tenemos Node.js en nuestro equipo! Con Node.js, estamos listos para aprovechar al máximo todas las increíbles herramientas que nos ayudarán a probar nuestro código y llevar nuestras habilidades de desarrollo al siguiente nivel.
+
+Variables, tipos y operadores
+Objetivos
+
+Comprender cómo declarar y utilizar variables en JavaScript.
+Conocer los principales tipos de datos en JavaScript y su uso.
+Aprender a utilizar operadores para realizar cálculos y manipulaciones de datos.
+ 
+
+Variables
+
+Las variables en JavaScript permiten almacenar y manipular datos. Se pueden declarar utilizando las palabras clave let o const.
+
+Ejemplo de declaración y asignación de valores:
+
+let edad = 50;
+let apellidos = "Santos";
+let meGustaJS = true;
+Es posible declarar una variable sin asignarle un valor, en cuyo caso su contenido será undefined. Además, las variables pueden cambiar su tipo de dato en tiempo de ejecución:
+
+let edad = 32;  
+edad = "Treinta y dos";  // Cambio de número a cadena de texto
+Operadores
+
+Los operadores en JavaScript permiten realizar operaciones matemáticas, comparaciones y manipulaciones de datos.
+
+Ejemplo de operador de asignación:
+
+let total = 13 - 7;  // Resultado: 6
+total = "seis";  // Cambio de número a cadena de texto
+Cuando se trabaja con cadenas de texto, el operador + se usa para concatenarlas:
+
+let nombre = "Juan";
+let edad = 25;
+
+console.log("¡Hola, " + nombre + "! Tienes " + edad + " años.");
+El método console.log() permite visualizar información en la consola del navegador, facilitando la depuración del código.
+
+Operadores básicos
+
+Operador 	Descripción 	Ejemplo 
+a + b	Suma números o concatena cadenas 	
+let suma = 12 + 3; // 15 
+let concatenacion = "12" + "3"; // "123"
+a - b	Resta b de a	
+let resta = 12 - 3; // 9
+a * b	Multiplica a por b 	
+let multiplicacion = 12 * 3; // 36
+a / b	Divide a entre b 	
+let division = 12 / 3; // 4 
+let divisionDecimal = 12 / 5; // 2.4
+Cuando se combinan operadores en una expresión, se respeta la precedencia matemática.
+
+Ejemplo:
+
+let resultado = 2 + 4 * 10;  // Resultado: 42
+let resultado2 = (2 + 4) * 10;  // Resultado: 60
+Para modificar el orden de ejecución, se utilizan paréntesis, como en las matemáticas tradicionales.
+
+Operadores de asignación compuesta
+
+Estos operadores combinan una operación matemática con la asignación de un valor.
+
+Operador 	Descripción 	Ejemplo 
++=	Suma y asigna el resultado 	
+let suma = 8; 
+suma += 2; // 10
+-=	Resta y asigna el resultado 	
+let resta = 15; 
+resta -= 7; // 8
+*=	Multiplica y asigna el resultado	
+let multiplicacion = 5; 
+multiplicacion *= 4; // 20
+/=	Divide y asigna el resultado 	
+let division = 50; 
+division /= 2; // 25
+Estos operadores también funcionan con cadenas de texto:
+
+let mensaje = "¡Hola, ";
+mensaje += "mundo!";  // "¡Hola, mundo!"
+Tipos de datos
+
+JavaScript maneja diferentes tipos de datos, los más comunes son:
+
+Números: Enteros y decimales (42, 3.14).
+
+Cadenas de texto: Representan texto ("Hola").
+
+Booleanos: Solo pueden tener valores true o false.
+
+Undefined: Indica que una variable ha sido declarada pero no tiene un valor asignado.
+
+Null: Representa la ausencia intencionada de valor.
+
+Más adelante, se explorarán otros tipos como objetos y arreglos, que permiten estructurar mejor la información.
+
+Condicionales
+Objetivos
+
+Conocer los valores booleanos, que representan verdadero o falso en programación.
+Aprender sobre los operadores de comparación, que permiten evaluar y comparar valores.
+Comprender el uso de if, else if y else para estructurar decisiones en el código.
+Explorar los operadores lógicos AND (&&) y OR (||), que permiten combinar condiciones y generar reglas más avanzadas.
+ 
+
+Booleanos y operadores de comparación
+
+Los booleanos son un tipo de dato que solo pueden tomar dos valores: true (verdadero) o false (falso). Son esenciales para la toma de decisiones en un programa.
+
+Ejemplo:
+
+let esLunes = true;
+let esFinDeSemana = false;
+Los operadores de comparación permiten evaluar expresiones y devolver valores booleanos.
+
+Ejemplo:
+
+let numero = 10;
+console.log(numero > 5); // true
+También podemos usarlos para verificar si un valor cumple una condición específica:
+
+let edad = 20;
+console.log(edad >= 18); // true
+Aquí tienes un resumen de los operadores de comparación más comunes:
+
+Operador 	Descripción 	Ejemplo 
+>	Mayor que 	10 > 5 → true
+<	Menor que 	5 < 10 → true
+>=	Mayor o igual que 	10 >= 10 → true
+<=	Menor o igual que 	5 <= 10 → true
+==	Igualdad débil (sin verificar tipo)	"5" == 5 → true
+===	Igualdad estricta (verifica tipo)	"5" === 5 → false
+!=	Desigualdad	10 != 5 → true
+ 
+ 
+
+Condicionales
+
+Los condicionales permiten que el código tome diferentes caminos dependiendo de una condición.
+
+Ejemplo:
+
+let esDeDia = true;
+
+if (esDeDia) {
+    console.log("¡Explora el mundo!");
+}
+También es posible escribir condiciones de forma explícita:
+
+if (esDeDia == true) {
+    console.log("Además, ¡usa una gorra!");
+}
+Si bien esta comparación es válida, generalmente no es necesario hacerla, ya que esDeDia por sí solo ya representa un valor booleano.
+
+Else y else if
+
+Las sentencias else y else if permiten manejar múltiples escenarios en una misma estructura condicional.
+
+Ejemplo:
+
+let mascota = "perro";
+
+if (mascota == "perro") {
+    console.log("¡Tienes un amigo peludo!");
+} else {
+    console.log("¡Tienes un compañero misterioso!");
+}
+También es posible manejar varios casos con else if:
+
+let clima = "soleado";
+
+if (clima == "soleado") {
+    console.log("¡Es un día perfecto para un picnic!");
+} else if (clima == "lluvioso") {
+    console.log("¡Hora de saltar en charcos!");
+} else {
+    console.log("¡Vamos a tirarnos en trineo en la nieve!");
+}
+Uso de operadores lógicos
+
+Podemos combinar condiciones con los operadores && (AND) y || (OR).
+
+Ejemplo:
+
+let temperatura = 25;
+let estaLloviendo = false;
+
+if (temperatura >= 20 && !estaLloviendo) {
+    console.log("¡Este es un buen día para dar un paseo!");
+}
+Aquí, la condición solo será true si la temperatura es mayor o igual a 20 y no está lloviendo.
+
+Si quisiéramos que la condición se cumpla cuando al menos una de las dos sea verdadera, podemos usar || (OR):
+
+if (temperatura >= 20 || !estaLloviendo) {
+    console.log("¡Podría ser un buen día para salir!");
+}
+Recursos adicionales
+
+Si deseas profundizar en estos temas, aquí tienes algunos recursos útiles:
+
+Igualdad estricta: Aprende sobre cómo JavaScript compara valores de manera estricta.
+MDN - Igualdad estricta
+
+Valores verdaderos y falsos: Descubre qué valores en JavaScript se consideran true o false.
+MDN - Truthy y Falsy
+
+Sigue explorando y practicando para mejorar tu lógica de programación.
+
+Bucles
+Objetivos
+
+Comprender la importancia y utilidad de los bucles en la programación.
+Conocer los operadores de incremento (++) y decremento (--).
+Aprender el funcionamiento y uso del bucle for.
+Explorar el bucle while y sus aplicaciones.
+Identificar y evitar errores comunes como los bucles infinitos.
+ 
+
+Los bucles son una herramienta fundamental en la programación, ya que permiten ejecutar un conjunto de instrucciones múltiples veces sin necesidad de repetir el código manualmente. Hoy exploraremos los siguientes conceptos clave:
+
+El bucle for
+
+En programación, es común encontrar situaciones en las que necesitamos repetir una acción un número determinado de veces. Para ello, utilizamos el bucle for.
+
+Por ejemplo, si queremos imprimir los números del 0 al 2, podemos hacerlo con el siguiente código:
+
+for (let i = 0; i < 3; i++) {
+    console.log(i);
+}
+Este bucle tiene tres partes fundamentales:
+
+Inicialización (var i = 0): Se ejecuta una única vez antes de que el bucle comience.
+
+Condición (i < 3): Evalúa si el bucle debe seguir ejecutándose.
+
+Incremento (i++): Se ejecuta después de cada iteración, aumentando el valor de i.
+
+Si en lugar de contar hacia adelante, queremos contar hacia atrás, podemos modificar el bucle de la siguiente manera:
+
+for (let i = 10; i > 0; i--) {
+    console.log(i);
+}
+El bucle while
+
+El bucle while es útil cuando no sabemos de antemano cuántas veces se ejecutará una acción, pero sí sabemos en qué condiciones debe repetirse.
+
+Por ejemplo, el siguiente código imprimirá los números del 0 al 2 utilizando while:
+
+let i = 0;
+while (i < 3) {
+    console.log(i);
+    i++;
+}
+En este caso:
+
+Inicializamos i = 0.
+
+El bucle se ejecuta mientras la condición i < 3 sea verdadera.
+
+Incrementamos i++ en cada iteración para evitar un bucle infinito.
+
+Podemos pensar en while como una estructura similar a if, pero que se repite hasta que la condición deje de cumplirse.
+
+Precaución con los bucles infinitos
+
+Un bucle infinito ocurre cuando la condición de terminación nunca se cumple, lo que puede bloquear el programa.
+
+Por ejemplo, el siguiente código causará un bucle infinito:
+
+let i = 0;
+while (i < 3) {
+    console.log(i);
+}
+En este caso, i nunca se incrementa, por lo que i < 3 siempre será verdadero. Para evitar esto, debemos asegurarnos de modificar la variable de control dentro del bucle.
+
+La depuración de código es una habilidad esencial en el desarrollo de software, ya que permite identificar y corregir errores en los programas de manera eficiente. A través de Visual Studio Code, podemos utilizar herramientas que facilitan este proceso. En esta sesión, aprenderemos a:
+
+¿Cómo pongo un punto de interrupción?
+
+Para colocar un punto de interrupción en Visual Studio Code, sigue estos pasos:
+
+Abre tu archivo de código en Visual Studio Code.
+Ve a la línea de código donde deseas colocar el punto de interrupción.
+Haz clic en el margen izquierdo del editor, justo al lado del número de línea donde deseas que se coloque el punto de interrupción. Debería aparecer un pequeño círculo rojo. Este es tu punto de interrupción.
+Una vez que hayas colocado el punto de interrupción, aparecerá una marca roja en el margen izquierdo, indicando que se ha establecido un punto de interrupción en esa línea de código.
+ Ahora, cuando ejecutes tu programa en modo de depuración, Visual Studio Code se detendrá automáticamente en ese punto de interrupción, permitiéndote examinar el estado del programa en ese momento. Luego, ejecuta tu programa en modo de depuración presionando la tecla F5. Una vez que la ejecución esté detenida, puedes avanzar línea a línea con F10 o dejar que se ejecute todo con F5.
+
+¿Cómo ejecuto en modo depuración?
+
+Para ejecutar un programa en modo de depuración en Visual Studio Code, sigue estos pasos:
+
+Abre tu proyecto en Visual Studio Code.
+Abre el archivo que deseas depurar.
+Coloca puntos de interrupción en las líneas de código donde quieras detener la ejecución para examinar el estado del programa.
+Ve a la barra de navegación superior y busca el icono de "Run" (generalmente se parece a un triángulo con un punto).
+Haz clic en la flecha desplegable junto al botón "Run" y elige la opción "Start Debugging" o "Start Debugging" (en inglés).
+Visual Studio Code ejecutará tu programa en modo de depuración y se detendrá en el primer punto de interrupción que encuentre.
+Usa los controles de depuración en la barra lateral izquierda (como "Continuar", "Paso a paso", "Saltar" y "Detener") para controlar la ejecución del programa y examinar el estado en cada punto de interrupción.
+Nota: Si te aparece un mensaje que te pide elegir debugger, pincha en Node.js. Recuerda que ya lo instalamos y nos ayudaría a encontrar errores en nuestro código. 
+
+
+
+Verás que tu programa se detiene justo en el punto de interrupción. Ahora, puedes examinar el valor de las variables, ver cómo fluye el código y descubrir dónde se produce el error. Por ejemplo, supongamos que tienes una función que debería devolver el doble de un número, pero parece que no está funcionando bien. Puedes colocar un punto de interrupción en la primera línea de esa función y ver qué está pasando cuando se ejecuta.
+
+Uso de console.log() para depurar
+
+Una técnica sencilla y eficaz para depurar código es utilizando console.log(). Este método imprime mensajes en la consola, lo que permite observar el valor de variables, el flujo de ejecución y cualquier otra información relevante durante la ejecución del programa.
+
+Para utilizarlo, solo debes insertar console.log() en las líneas donde desees verificar los valores. Por ejemplo:
+
+let numero = 5;
+console.log("El valor de numero es:", numero);
+Esto imprimirá el valor de la variable numero en la consola, ayudándote a entender cómo cambia a lo largo del código.
+
+Este enfoque es útil para realizar depuración rápida y sin tener que detener la ejecución del programa, pero no reemplaza herramientas como los puntos de interrupción que permiten una inspección más detallada y controlada del flujo del código.
+
+Operaciones con Arreglos
+En lugar de utilizar múltiples variables para almacenar información relacionada, los arreglos permiten agrupar datos similares de forma ordenada. Por ejemplo, si tuviéramos que almacenar datos de un empleado, como su nombre, apellido y correo electrónico, en lugar de usar variables separadas, podemos emplear un arreglo:
+
+let userData = ["Lewis", "Hamilton", "l.hamilton@oficina.com"];
+Con este arreglo, todos los datos del empleado están organizados y listos para ser utilizados. Ahora exploraremos cómo realizar operaciones comunes con arreglos.
+
+Agregar elementos al arreglo
+
+Si deseas agregar un nuevo dato al final de un arreglo, puedes utilizar el método .push(). Esto permite ampliar el arreglo con un nuevo valor, como se muestra a continuación:
+
+let userData = ["Lewis", "Hamilton", "l.hamilton@oficina.com"];
+userData.push("piloto");
+console.log(userData);
+Eliminar elementos del arreglo
+
+Si deseas eliminar el último elemento de un arreglo, puedes usar el método .pop(). Esto quitará el último valor del arreglo, como en el siguiente ejemplo:
+
+let userData = ["Lewis", "Hamilton", "l.hamilton@oficina.com", "piloto"];
+userData.pop();
+console.log(userData);
+Actualizar elementos del arreglo
+
+Para modificar un valor dentro del arreglo, puedes acceder a la posición específica mediante el índice y asignar un nuevo valor. Por ejemplo, si el pasatiempo de Lewis cambia de "piloto" a "fotógrafo", lo puedes actualizar de la siguiente manera:
+
+userData[3] = "Fotógrafo";
+console.log(userData); // ["Lewis", "Hamilton", "l.hamilton@oficina.com", "Fotógrafo"];
+Recuerda que los índices en los arreglos comienzan desde 0, por lo que:
+
+userData[0] guarda el nombre
+
+userData[1] guarda el apellido
+
+userData[2] guarda el correo electrónico
+
+userData[3] guarda el pasatiempo
+
+Propiedad .length
+
+Cada arreglo tiene una propiedad llamada .length que nos indica la cantidad de elementos que contiene. Por ejemplo:
+
+let userData = ["Lewis", "Hamilton", "l.hamilton@oficina.com", "piloto"];
+console.log(userData.length); // 4
+Si luego eliminamos el último elemento:
+
+userData.pop();
+console.log(userData.length); // 3
+Accediendo a los elementos del arreglo
+
+En los arreglos, puedes acceder a un elemento específico utilizando su índice. Por ejemplo, si deseas acceder al valor de la primera compra de una semana, puedes hacerlo así:
+
+console.log("El costo de la primera compra: " + comprasSemanaFeb15[0]);
+Y si deseas obtener el valor de la última compra, puedes utilizar la propiedad .length para calcular el índice del último elemento:
+
+let númeroDeCompras = comprasSemanaFeb15.length;
+let valorÚltimaCompra = comprasSemanaFeb15[númeroDeCompras - 1];
+console.log("El costo de la última compra: $" + valorÚltimaCompra);
+Calculando el total de los elementos en un arreglo
+
+Si tienes un arreglo con varios elementos y deseas calcular la suma de todos, puedes utilizar un bucle for para recorrer cada elemento y sumarlo al total. Aquí tienes un ejemplo de cómo hacerlo:
+
+let total = 0;
+for (let i = 0; i < comprasSemanaFeb15.length; i++) {
+    total += comprasSemanaFeb15[i];
+}
+console.log("El gasto total fue: $" + total);
+Este enfoque es ideal cuando tienes grandes cantidades de datos en un arreglo y necesitas realizar un cálculo basado en todos esos elementos.
+
+Reglas básicas al trabajar con arreglos
+
+Flexibilidad de tipos: Dentro de un arreglo, puedes almacenar cualquier tipo de dato, como números, cadenas de texto, valores booleanos, o incluso otros arreglos.
+
+Acceso mediante índices: Cada elemento del arreglo tiene un índice asociado, comenzando en 0. Para acceder a un valor, simplemente usa el índice correspondiente.
+
+Propiedad .length: Puedes saber cuántos elementos tiene un arreglo utilizando esta propiedad.
+
+Métodos .push() y .pop(): Estos métodos son útiles para agregar y eliminar elementos del arreglo, respectivamente.
+
+Objetos
+Objetivos
+
+Comprender cómo los objetos en JavaScript permiten organizar información mediante propiedades y métodos.
+Aprender cómo acceder a las propiedades de un objeto utilizando el operador ..
+Explorar cómo los objetos pueden contener métodos que operan sobre sus propias propiedades.
+Entender el uso de this para hacer referencia a las propiedades del objeto desde dentro de sus métodos.
+Reproducir Vídeo
+Objetos en JavaScript
+
+Hoy vamos a explorar los objetos en JavaScript y cómo nos permiten almacenar y organizar información de manera eficiente. Para hacerlo más interesante, vamos a compararlos con algo delicioso: ¡una hamburguesa!
+
+Imagina que queremos construir la hamburguesa perfecta. Esta tiene propiedades como "pan", "proteína", "queso", y muchos más. Los objetos en JavaScript funcionan de manera similar, permitiéndonos almacenar diferentes características o propiedades dentro de una entidad organizada. Vamos a ver cómo construir tu propia "hamburguesa" utilizando objetos.
+
+Ejemplo básico de objeto
+
+Un objeto en JavaScript se puede definir usando llaves {} y dentro de ellas, colocamos las propiedades que queremos almacenar, como en este ejemplo:
+
+let hamburguesa = {
+    pan: "pan de hamburguesa",
+    carne: "carne de res",
+    queso: "cheddar",
+    ingredientes: ["lechuga", "tomate", "cebolla", "pepinillos"]
+};
+En este caso, hemos creado un objeto llamado hamburguesa, que tiene propiedades como el tipo de pan, carne, queso y una lista de ingredientes adicionales. Cada una de estas propiedades se puede acceder usando su nombre.
+
+Crear objetos con diferentes características
+
+Si queremos crear más hamburguesas con diferentes características, podemos fácilmente crear nuevos objetos con propiedades únicas. Por ejemplo:
+
+let hamburguesaClasica = {
+    pan: "pan de hamburguesa",
+    carne: "carne de res",
+    queso: "cheddar",
+    extras: ["lechuga", "tomate", "cebolla", "pepinillos"]
+};
+Aquí hemos creado una "hamburguesa clásica" con ingredientes específicos. Cada objeto puede tener sus propias propiedades, lo que hace que sea más fácil organizar y manejar la información.
+
+Acceder a las propiedades de un objeto
+
+Para acceder a las propiedades de un objeto, utilizamos el punto . seguido del nombre de la propiedad. Aquí tienes un ejemplo:
+
+console.log("Pan: " + hamburguesaClasica.pan);
+console.log("Carne: " + hamburguesaClasica.carne);
+console.log("Queso: " + hamburguesaClasica.queso);
+console.log("Extras: " + hamburguesaClasica.extras);
+En este código, estamos imprimiendo las propiedades de la hamburguesaClasica. El resultado sería:
+
+Pan: pan de hamburguesa
+Carne: carne de res
+Queso: cheddar
+Extras: leche, tomate, cebolla, pepinillos
+Métodos dentro de objetos
+
+Los objetos también pueden tener métodos, es decir, funciones que pueden realizar acciones con las propiedades del objeto. Por ejemplo, podemos hacer que nuestra hamburguesa "hable" y nos diga sus ingredientes:
+
+let hamburguesaClasica = {
+    pan: "pan con semillas de sésamo",
+    carne: "carne de res 100%",
+    queso: "queso cheddar",
+    extras: ["lechuga", "tomate", "cebolla", "salsa especial"],
+    infoHamburguesa: function() {
+        console.log("Pan: " + this.pan);
+        console.log("Carne: " + this.carne);
+        console.log("Queso: " + this.queso);
+        console.log("Extras: " + this.extras.join(", "));
+    }
+}
+Aquí hemos agregado un método infoHamburguesa al objeto hamburguesaClasica que imprime toda la información de la hamburguesa. Usamos this para referirnos a las propiedades del objeto dentro de su propio contexto.
+
+Cuando ejecutamos:
+
+hamburguesaClasica.infoHamburguesa();
+El resultado sería:
+
+Pan: pan con semillas de sésamo
+Carne: carne de res 100%
+Queso: queso cheddar
+Extras: lechuga, tomate, cebolla, salsa especial
+Uso de this en objetos
+
+La palabra clave this se refiere al propio objeto dentro de su contexto. En el ejemplo anterior, this hace referencia a las propiedades pan, carne, queso, y extras dentro del objeto hamburguesaClasica. Esto permite que el objeto "hable" de sí mismo sin necesidad de repetir su nombre.
+
+Por ejemplo:
+
+let hamburguesaEspecial = {
+    pan: "pan de hamburguesa",
+    carne: "carne de res",
+    queso: "queso americano",
+    extras: ["lechuga", "tomate", "cebolla", "salsa especial"],
+    infoHamburguesa: function() {
+        console.log("Pan: " + this.pan);
+        console.log("Carne: " + this.carne);
+        console.log("Queso: " + this.queso);
+        console.log("Extras: " + this.extras.join(", "));
+    }
+}
+
+hamburguesaEspecial.infoHamburguesa();
+Este código permitirá que nuestra hamburguesa especial imprima toda su información sin repetir el nombre del objeto. De nuevo, utilizamos this para acceder a las propiedades dentro del objeto.
+
+¡Ahora que sabes cómo funcionan los objetos en JavaScript, puedes crear estructuras complejas y organizadas para manejar tus datos de manera más eficiente!
+
+Funciones
+Objetivos
+
+Comprender cómo se definen y estructuran las funciones en JavaScript.
+Aprender cómo invocar una función para ejecutar su código.
+Entender cómo utilizar parámetros para hacer que las funciones reciban valores dinámicos.
+Explorar el uso de return para devolver valores desde una función.
+Las funciones son bloques de código que se ejecutan solo cuando las llamamos, lo que nos permite reutilizar el código sin tener que escribirlo una y otra vez. Las funciones son herramientas poderosas que nos permiten estructurar de manera más organizada nuestro código.
+
+Definición de funciones
+En JavaScript, una función se define utilizando la palabra clave function, seguida de un nombre que la identifique y un bloque de código que se ejecutará cuando la función sea invocada.
+
+Sintaxis básica de una función
+
+function nombreFuncion() {
+    // código de la función
+}
+Llamando o invocando funciones
+
+Una vez que una función está definida, no se ejecuta automáticamente al momento de su declaración. Para que la función se ejecute, es necesario llamarla o invocarla utilizando su nombre seguido de paréntesis.
+
+Ejemplo
+
+function saludar() {
+    console.log("¡Hola, amigo!");
+}
+
+saludar();
+Al llamar a la función saludar(), el código dentro de ella se ejecuta y muestra el mensaje "¡Hola, amigo!" en la consola. Esto permite reutilizar funciones sin necesidad de repetir el mismo código.
+
+Agregando parámetros
+
+Las funciones en JavaScript también pueden recibir valores dinámicos, conocidos como parámetros. Los parámetros permiten que una función reciba diferentes valores cada vez que se llame, lo que aumenta su versatilidad. Los valores que se pasan a la función se llaman argumentos.
+
+Ejemplo con parámetros
+
+function saludar(nombreAmigo) {
+    console.log("¡Hola, " + nombreAmigo + "!");
+}
+
+saludar("Luis");
+En este ejemplo, la función saludar recibe un parámetro llamado nombreAmigo, y cuando la invocamos con el argumento "Luis", la función imprime "¡Hola, Luis!" en la consola.
+
+Uso de return
+
+El uso de return permite que una función devuelva un valor al lugar donde fue llamada. Sin return, el valor calculado dentro de la función no puede ser utilizado fuera de ella.
+
+Ejemplo con return
+
+function encontrarMaximo(a, b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+let numero1 = 10;
+let numero2 = 7;
+
+let maximo = encontrarMaximo(numero1, numero2);
+
+console.log("El máximo entre", numero1, "y", numero2, "es:", maximo);
+En este ejemplo, la función encontrarMaximo recibe dos números y devuelve el mayor de ellos mediante la instrucción return. El valor retornado es almacenado en la variable maximo, y luego es mostrado en la consola.
+
+Document Object Model
+Objetivos
+
+Entender qué es el DOM y cómo se estructura.
+Aprender a acceder y modificar elementos del DOM con JavaScript.
+Conocer cómo el DOM interactúa con los eventos del navegador.
+¿Qué es el DOM?
+
+El DOM es una representación estructurada de un documento HTML o XML, que convierte el contenido de la página web en un conjunto de objetos que pueden ser manipulados. Piensa en él como el "esqueleto" de la página, donde cada elemento HTML (como etiquetas <div>, <p>, <img>, etc.) es un nodo del árbol.
+
+Cuando un navegador carga una página web, crea un árbol DOM, que organiza todos los elementos de la página. Cada nodo de este árbol es un objeto que puede ser modificado, eliminado o reemplazado dinámicamente utilizando JavaScript.
+
+El DOM proporciona una interfaz de programación para acceder a los elementos y sus propiedades, lo que permite a los desarrolladores interactuar con el contenido de la página de forma flexible y eficiente.
+
+Estructura del DOM
+
+La estructura del DOM es un árbol jerárquico que organiza los elementos de una página en nodos. Cada nodo representa un componente del documento. Los nodos más importantes son:
+
+Documento (document): El nodo raíz que contiene todo el contenido de la página.
+
+Elemento (Element): Representa una etiqueta HTML, como <div>, <p>, <a>.
+
+Atributo (Attribute): Representa los atributos de los elementos, como id, class, href.
+
+Texto (Text): Representa el contenido de texto dentro de un elemento.
+
+Ejemplo de un árbol DOM simple para el siguiente HTML:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi página</title>
+  </head>
+  <body>
+    <h1>Hola Mundo</h1>
+    <p>Bienvenidos a mi sitio web</p>
+  </body>
+</html>
+Arbol DOM:
+
+Document
+ ├── html
+ │   ├── head
+ │   │   └── title
+ │   │       └── "Mi página"
+ │   └── body
+ │       ├── h1
+ │       │   └── "Hola Mundo"
+ │       └── p
+ │           └── "Bienvenidos a mi sitio web"
+
+
+Manipulación del DOM
+Objetivos
+
+Comprender cómo seleccionar y modificar elementos del DOM usando JavaScript.
+Aprender a trabajar con los métodos querySelector y querySelectorAll para seleccionar elementos del DOM.
+Conocer cómo modificar el contenido, los atributos y la estructura de los elementos en una página web.
+  La manipulación del Document Object Model (DOM) es un aspecto clave en la creación de sitios web interactivos. Gracias a JavaScript, puedes acceder y modificar la estructura, los elementos y el contenido de una página web de manera dinámica. Esto permite crear interfaces más dinámicas, con cambios en tiempo real sin necesidad de recargar la página.
+
+Selección de elementos en el DOM
+Para manipular el DOM, primero necesitas seleccionar los elementos a los que deseas aplicar cambios. JavaScript ofrece varias maneras de seleccionar elementos, pero los métodos más modernos y flexibles son querySelector() y querySelectorAll().
+
+querySelector()
+
+El método querySelector() permite seleccionar el primer elemento que coincide con el selector CSS proporcionado. Este selector puede ser cualquier tipo de selector válido de CSS, como id, class, o incluso combinaciones más complejas.
+
+Sintaxis
+
+let elemento = document.querySelector('selector');
+Ejemplo
+
+// Selecciona el primer elemento con la clase "boton"
+let boton = document.querySelector('.boton');
+En este ejemplo, querySelector() busca el primer elemento que tenga la clase boton y lo almacena en la variable boton. Si no hay elementos que coincidan con el selector, el valor de boton será null.
+
+querySelectorAll()
+
+El método querySelectorAll() selecciona todos los elementos que coinciden con el selector proporcionado. A diferencia de querySelector(), que devuelve solo el primer elemento coincidente, querySelectorAll() devuelve una NodeList, que es una colección de nodos.
+
+Sintaxis
+
+let elementos = document.querySelectorAll('selector');
+Ejemplo
+
+// Selecciona todos los elementos con la clase "enlace"
+let enlaces = document.querySelectorAll('.enlace');
+En este caso, querySelectorAll() devuelve todos los elementos con la clase enlace. Si no se encuentran coincidencias, la NodeList estará vacía, pero no será null.
+
+Manipulación de elementos seleccionados
+Una vez que hayas seleccionado los elementos del DOM, puedes manipularlos de diversas maneras, como cambiar su contenido, atributos, o incluso su estilo. A continuación se muestran algunos ejemplos comunes.
+
+Modificar el contenido de un elemento
+
+Para cambiar el contenido de texto de un elemento, puedes usar la propiedad textContent o innerHTML:
+
+Ejemplo
+
+let encabezado = document.querySelector('h1');
+encabezado.textContent = 'Nuevo Título';
+En este ejemplo, el texto dentro del primer h1 en la página se cambia a "Nuevo Título".
+
+Modificar los atributos de un elemento
+
+Puedes cambiar los atributos de los elementos HTML, como el src de una imagen, el href de un enlace, o el class de un div. Utiliza el método setAttribute() para cambiar cualquier atributo.
+
+Ejemplo
+
+let imagen = document.querySelector('img');
+imagen.setAttribute('src', 'nueva-imagen.jpg');
+Este ejemplo cambia la imagen en la etiqueta img al archivo nueva-imagen.jpg.
+
+Modificar el estilo de un elemento
+
+También puedes cambiar el estilo de un elemento utilizando la propiedad style.
+
+Ejemplo
+
+let cuadro = document.querySelector('.cuadro');
+cuadro.style.backgroundColor = 'blue';
+En este caso, el fondo del primer elemento con la clase cuadro se cambia a color azul.
+
+Agregar o eliminar elementos del DOM
+
+A veces es necesario agregar nuevos elementos a la página o eliminar los existentes. Esto se puede hacer utilizando métodos como appendChild() y removeChild().
+
+Ejemplo (agregar un nuevo párrafo)
+
+let nuevoParrafo = document.createElement('p');
+nuevoParrafo.textContent = 'Este es un párrafo agregado dinámicamente.';
+document.body.appendChild(nuevoParrafo);
+Este código crea un nuevo párrafo y lo agrega al final del body de la página.
+
+Ejemplo (eliminar un párrafo)
+
+let parrafo = document.querySelector('p');
+document.body.removeChild(parrafo);
+Este código elimina el primer párrafo (<p>) del body.
+
+Recorrido y manipulación de múltiples elementos
+
+Si seleccionas varios elementos utilizando querySelectorAll(), puedes recorrer la NodeList resultante y aplicar cambios a cada uno de los elementos seleccionados.
+
+Ejemplo
+
+let enlaces = document.querySelectorAll('a');
+
+enlaces.forEach(function(enlace) {
+  enlace.style.color = 'red';  // Cambia el color de todos los enlaces a rojo
+});
+
+Eventos
+Objetivos
+
+Comprender el concepto de eventos en JavaScript.
+Aprender a manejar eventos utilizando addEventListener.
+Explorar los eventos más comunes como onclick y onchange.
+ 
+
+En la programación web, los eventos son acciones o sucesos que ocurren en la página web, generalmente como resultado de la interacción del usuario. Estos eventos pueden ser de cualquier tipo, como hacer clic en un botón, mover el ratón sobre un elemento, escribir en un campo de texto, entre otros. JavaScript nos permite capturar y reaccionar a estos eventos para crear interacciones dinámicas en nuestras páginas.
+
+¿Qué son los eventos?
+Un evento en JavaScript es algo que sucede en el navegador como resultado de la interacción del usuario o de otros sucesos. Los eventos pueden ser de distintos tipos, tales como:
+
+Click: cuando el usuario hace clic en un elemento.
+
+Tecla: cuando se presiona o se suelta una tecla.
+
+Cambio: cuando un campo de formulario cambia su valor.
+
+Enfoque: cuando un elemento recibe el enfoque (por ejemplo, cuando se selecciona un campo de texto).
+
+Desplazamiento: cuando el usuario hace scroll en la página.
+
+JavaScript te permite escuchar estos eventos y ejecutar funciones en respuesta, lo que se conoce como "manejo de eventos".
+
+Manejo de eventos en JavaScript
+
+El manejo de eventos en JavaScript puede realizarse de varias maneras, pero la más común y recomendada es a través del método addEventListener(). Este método permite asociar una función a un evento de un elemento, sin necesidad de modificar directamente el HTML.
+
+Sintaxis de addEventListener
+
+elemento.addEventListener('evento', funcion);
+Donde:
+
+elemento: el nodo del DOM que va a "escuchar" el evento (por ejemplo, un botón, un campo de texto, etc.).
+
+evento: el tipo de evento que se desea escuchar (por ejemplo, 'click', 'change', 'mouseover', etc.).
+
+funcion: la función que se ejecutará cuando se dispare el evento.
+
+Evento onclick
+
+Uno de los eventos más comunes es el click o onclick, que se dispara cuando el usuario hace clic en un elemento de la página, como un botón, una imagen, o un enlace.
+
+Sintaxis con onclick
+
+En HTML, podrías definir un manejador de evento onclick de la siguiente forma:
+
+<button onclick="alert('¡Botón clickeado!')">Haz clic aquí</button>
+Sin embargo, es más recomendable usar addEventListener() en lugar de definir el evento directamente en el HTML.
+
+Ejemplo con addEventListener
+
+let boton = document.querySelector('button');
+
+boton.addEventListener('click', function() {
+  alert('¡Botón clickeado!');
+});
+En este ejemplo, cuando el usuario hace clic en el botón, se ejecuta la función que muestra una alerta con el mensaje "¡Botón clickeado!".
+
+Evento onchange
+
+El evento onchange se dispara cuando el valor de un campo de formulario cambia. Este evento es útil, por ejemplo, cuando un usuario selecciona una opción de un select o escribe en un campo de texto.
+
+Sintaxis con onchange en HTML
+
+<input type="text" onchange="alert('El valor cambió!')">
+Ejemplo con addEventListener
+
+let input = document.querySelector('input[type="text"]');
+
+input.addEventListener('change', function() {
+  alert('El valor del campo ha cambiado');
+});
+En este caso, cuando el usuario cambia el valor del campo de texto y pierde el foco (hace clic fuera del campo), se dispara el evento change y se muestra una alerta con el mensaje "El valor del campo ha cambiado".
+
+Uso de múltiples eventos en un solo elemento
+
+Puedes asociar múltiples eventos a un mismo elemento. Esto es útil cuando deseas que diferentes acciones ocurran dependiendo de la interacción del usuario.
+
+Ejemplo
+
+let boton = document.querySelector('button');
+
+boton.addEventListener('click', function() {
+  alert('Botón clickeado');
+});
+
+boton.addEventListener('mouseover', function() {
+  console.log('El mouse está sobre el botón');
+});
+En este ejemplo, el botón responde tanto a un clic (click) como a un desplazamiento del ratón sobre él (mouseover).
+
+ 
+Detener la propagación de un evento
+
+En algunos casos, es posible que desees detener la propagación de un evento. Esto significa que, una vez que el evento se ha disparado, no continuará propagándose a otros elementos del DOM (por ejemplo, si un evento está siendo escuchado en un elemento padre y no quieres que también se ejecute en los elementos hijos).
+
+Sintaxis para detener la propagación
+
+event.stopPropagation();
+Ejemplo
+
+let boton = document.querySelector('button');
+let contenedor = document.querySelector('.contenedor');
+
+contenedor.addEventListener('click', function() {
+  alert('Contenedor clickeado');
+});
+
+boton.addEventListener('click', function(event) {
+  alert('Botón clickeado');
+  event.stopPropagation();  // Evita que el evento llegue al contenedor
+});
+En este caso, cuando se hace clic en el botón, se muestra el mensaje "Botón clickeado", pero el evento no se propaga al contenedor, por lo que no se muestra el mensaje "Contenedor clickeado".
+
