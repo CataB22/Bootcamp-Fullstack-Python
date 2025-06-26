@@ -1,60 +1,67 @@
-// Obtener contadores desde los títulos
-let contadorSolicitudes = 2;
-let contadorConexiones = 500;
+let solis = 2;
+let conex = 500;
 
-// Obtener referencias a los elementos visuales
-let solicitudesTitulo = document.querySelector(".solicitudes h3");
-let conexionesTitulo = document.querySelector(".conexiones h3");
+let solTitulo = document.querySelector(".solicitudes h3");
+let conexTitulo = document.querySelector(".conexiones h3");
+let contSol = document.querySelector(".solicitudes");
+let soli1 = document.querySelector(".usuario.usuario-1");
+let soli2 = document.querySelector(".usuario.usuario-2");
+let botonLogout = document.querySelector(".logout");
 
-// Actualizar los contadores en pantalla
-function actualizarContadores() {
-    solicitudesTitulo.textContent = "Solicitudes de Conexión (" + contadorSolicitudes + ")";
-    conexionesTitulo.textContent = "Tus Conexiones (" + contadorConexiones + "+)";
+
+function actContadores() {
+  solTitulo.textContent = "Solicitudes de Conexión (" + solis + ")";
+  conexTitulo.textContent = "Tus Conexiones (" + conex + ")";
 }
 
-// Función para aceptar una solicitud
-function aceptarSolicitud(boton) {
-    let solicitud = boton.closest(".usuario");
-    solicitud.remove(); // Eliminar solicitud del DOM
-    contadorSolicitudes--;
-    contadorConexiones++;
-    actualizarContadores();
+function aceptarSolicitud(solicitud) {
+  contSol.removeChild(solicitud);
+  solis--;
+  conex++;
+  actContadores();
 }
 
-// Función para rechazar una solicitud
-function rechazarSolicitud(boton) {
-    let solicitud = boton.closest(".usuario");
-    solicitud.remove(); // Eliminar solicitud del DOM
-    contadorSolicitudes--;
-    actualizarContadores();
+function rechazarSolicitud(solicitud) {
+  contSol.removeChild(solicitud);
+  solis--;
+  actContadores();
 }
 
-// Función para editar el nombre del perfil
 function editarNombre() {
-    let nombre = document.querySelector(".info h2");
-    nombre.textContent = "Catalina Jara 😎"; // Cambia esto por lo que quieras
+  let nombre = document.querySelector(".info h2");
+  nombre.textContent = "Catalina Broughton";
 }
 
-// Agregar eventos después de que el DOM esté cargado
-window.onload = function () {
-    let botonesAceptar = document.querySelectorAll(".aceptar");
-    let botonesRechazar = document.querySelectorAll(".rechazar");
-    let linkEditar = document.querySelector(".editar");
+let botonesAceptar = document.querySelectorAll(".aceptar");
+let botonesRechazar = document.querySelectorAll(".rechazar");
+let botonEditar = document.querySelector(".editar");
 
-    botonesAceptar.forEach(function (btn) {
-        btn.onclick = function () {
-            aceptarSolicitud(btn);
-        };
-    });
+botonesAceptar[0].addEventListener("click", function () {
+  aceptarSolicitud(soli1);
+});
 
-    botonesRechazar.forEach(function (btn) {
-        btn.onclick = function () {
-            rechazarSolicitud(btn);
-        };
-    });
+botonesAceptar[1].addEventListener("click", function () {
+  aceptarSolicitud(soli2);
+});
 
-    linkEditar.onclick = function (e) {
-        e.preventDefault();
-        editarNombre();
-    };
-};
+botonesRechazar[0].addEventListener("click", function () {
+  rechazarSolicitud(soli1);
+});
+
+botonesRechazar[1].addEventListener("click", function () {
+  rechazarSolicitud(soli2);
+});
+
+botonEditar.addEventListener("click", function () {
+  editarNombre();
+});
+
+botonLogout.addEventListener("mouseover", function () {
+  botonLogout.style.backgroundColor = "#ff4444";
+  botonLogout.style.color = "white";
+});
+
+botonLogout.addEventListener("mouseout", function () {
+  botonLogout.style.backgroundColor = "";
+  botonLogout.style.color = "";
+});

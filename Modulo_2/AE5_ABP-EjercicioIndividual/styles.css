@@ -157,6 +157,11 @@ nav button {
     margin-right: 10px;
 }
 
+.logout {
+  cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
     .contenido {
         flex-direction: column;
